@@ -1,7 +1,12 @@
 import express from 'express'
 import colors from 'colors'
 import morgan from 'morgan'
+
+// Database config
 import { db } from './config/db';
+
+// Story Router
+import router from './routes/storyRouter';
 
 async function connectDB () {
     try {
@@ -18,5 +23,8 @@ const app = express()
 
 app.use(morgan('dev'))
 app.use(express.json())
+
+// Add router
+app.use("/api", router)
 
 export default app
