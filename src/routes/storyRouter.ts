@@ -7,6 +7,6 @@ const router = Router()
 
 // Routes
 router.get("/stories", StoryController.getAll)
-router.get("/stories/new", StoryController.new)
+router.post("/stories/new", StoryController.new)
 
 export default router;

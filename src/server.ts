@@ -25,6 +25,6 @@ app.use(morgan('dev'))
 app.use(express.json())
 
 // Add router
-app.use("/api", router)
+app.use("/api/", router)
 
 export default app
