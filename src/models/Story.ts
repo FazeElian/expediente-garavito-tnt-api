@@ -24,7 +24,7 @@ class Story extends Model {
 
     @AllowNull(false)
     @Column({
-        type: DataType.STRING
+        type: DataType.TEXT
     })
     declare content: string
 
