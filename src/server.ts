@@ -1,12 +1,16 @@
 import express from 'express'
 import colors from 'colors'
 import morgan from 'morgan'
+import cors from "cors";
 
 // Database config
 import { db } from './config/db';
 
 // Story Router
 import router from './routes/storyRouter';
+
+// CORS
+import { CORSConfig } from './config/cors';
 
 async function connectDB () {
     try {
@@ -21,6 +25,7 @@ connectDB();
 
 const app = express()
 
+app.use(cors(CORSConfig))
 app.use(morgan('dev'))
 app.use(express.json())
 
