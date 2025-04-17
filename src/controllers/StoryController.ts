@@ -13,6 +13,13 @@ export class StoryController {
         }
     }
     
+    static getById = async (req: Request, res: Response) => {
+        const { id } = req.params
+        const story = await Story.findByPk(id)
+
+        res.json(story)
+    }
+
     static new = async (req: Request, res: Response) => {
         try {
             const story = new Story(req.body);
