@@ -1,9 +1,8 @@
-import colors from "colors";
-import express from "express";
+import colors from 'colors'
+import server from './server'
 
 const port = process.env.PORT || 4000
-const app = express()
 
-app.listen(port, () => {
+server.listen(port, () => {
     console.log(colors.cyan.bold( `API running on port: ${port}`))
 })
