@@ -1,7 +1,7 @@
 import { Router } from "express";
 
 // Controller
-import { StoryController } from "../controllers/storyController";
+import { StoryController } from "../controllers/StoryController";
 
 const router = Router()
 
