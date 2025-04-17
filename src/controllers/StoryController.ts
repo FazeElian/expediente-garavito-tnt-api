@@ -4,10 +4,10 @@ import { Request, Response } from "express";
 import Story from "../models/Story";
 
 export class StoryController {
-    static getAll = async (res: Response) => {
+    static getAll = async (req: Request, res: Response) => {
         try {
             const stories = await Story.findAll();
-            res.status(200).send(stories);
+            res.json(stories);
         } catch (error) {
             res.status(500).json({ error: "Error creating the story" })
         }
