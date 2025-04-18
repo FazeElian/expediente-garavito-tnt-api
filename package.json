@@ -12,11 +12,13 @@
   "author": "Elián Ibarra",
   "license": "ISC",
   "dependencies": {
+    "cloudinary": "^2.6.0",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "express-validator": "^7.2.1",
+    "formidable": "^3.5.2",
     "morgan": "^1.10.0",
     "pg": "^8.14.1",
     "sequelize-typescript": "^2.1.6"
